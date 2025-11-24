@@ -5,7 +5,7 @@
     "age":18,
     "grade":69,
     "email":"pritam@gmail.net",
-    "address":"your mom's house"
+    "address":""
   },
   {
     "id":2,
@@ -13,7 +13,7 @@
     "age":100,
     "grade":99,
     "email":"banana@fruits.org",
-    "address":"the tree in your garden"
+    "address":"the tree in garden"
   },
   {
     "id":3,
@@ -21,6 +21,7 @@
     "age":"200",
     "grade":"106",
     "email":"apple@something.com",
-    "address":"the beach at hawaii"
+    "address":"In JnK"
   }
+
 ]
