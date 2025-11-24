@@ -3,12 +3,12 @@ import os
 import pandas as pd
 from sys import exit
 
-save_file = "C:\\vit py\\vityarthi project\\savedata.json"
+save_file = "C:\\Python\\assignment\\savedata.json"
     
 
 def main():
     data = load_data(save_file)
-    menu = "\nStudent Management\n1) List all\n2) Add student\n3) Update student\n4) Delete student\n5) Save and exit\n6) Exit without saving\nEnter an option :D\n "
+    menu = "\nStudent Management\n1) List all\n2) Add student\n3) Update student\n4) Delete student\n5) Save and exit\n6) Exit without saving\nEnter an option :)\n "
 
     while True:
         userInp = input(menu)
@@ -22,7 +22,7 @@ def main():
             email = input("Enter email (optional): ").strip() or None
             address = input("Enter address (optional): ").strip() or None
             data = add_studentRec(data, name, age, grade, email, address)
-            print("Student added :D")
+            print("Student added :)")
         elif userInp == "3":
             studentID = input("Enter student ID to update: ").strip()
             if studentID.isdigit() == False:
@@ -36,7 +36,7 @@ def main():
                     fields[field] = val
             try:
                 data = update_student_rec(data, studentID, **fields)
-                print("Student updated :D")
+                print("Student updated :)")
             except KeyError as p:
                 print(p)
             
@@ -48,7 +48,7 @@ def main():
             studentID = int(studentID)
             try:
                 data = delete_student_rec(data, studentID)
-                print("Student deleted :D")
+                print("Student deleted :)")
             except KeyError as q:
                 print(q)
 
@@ -58,7 +58,7 @@ def main():
             exit()
 
         elif userInp == "6":
-            print("Exiting without saving :D")
+            print("Exiting without saving :)")
             exit()
 
         else:
@@ -84,10 +84,6 @@ def load_data(path):
     except ValueError:
         # if the file is invalid
         return pd.DataFrame(columns=default_headers)
-    
-def save_data(data, path):
-    data.to_json(path, orient="records", indent=2, force_ascii=False)
-    print(path)
 
 def create_new_rec(data):
     if data.empty:
@@ -96,12 +92,16 @@ def create_new_rec(data):
         return int(data["id"].max()) + 1
     except Exception:
         return 1
-    
+
 def add_studentRec(data, name, age=None, grade=None, email=None, address=None):
     studentID = create_new_rec(data)
     new_student = {"id": studentID, "name": name, "age": age, "grade": grade, "email": email, "address": address}
     data = pd.concat([data, pd.DataFrame([new_student])], ignore_index=True)
     return data
+
+def save_data(data, path):
+    data.to_json(path, orient="records", indent=2, force_ascii=False)
+    print(path)
 
 def update_student_rec(data, student_id, **fields):
     thingy = data["id"] == student_id
@@ -112,16 +112,15 @@ def update_student_rec(data, student_id, **fields):
             data.loc[thingy, k] = v
     return data
 
-def delete_student_rec(data, student_id):
-    if (data["id"] == student_id).any() == False:
-        raise KeyError(f"Student id {student_id} not found")
-    return data[data["id"] != student_id].reset_index(drop=True)
-
 def print_students(data):
     if data.empty:
         print("No records found.")
     else:
         print(data.to_string(index=False))
 
+def delete_student_rec(data, student_id):
+    if (data["id"] == student_id).any() == False:
+        raise KeyError(f"Student id {student_id} not found")
+    return data[data["id"] != student_id].reset_index(drop=True)
 
 main()
