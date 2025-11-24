@@ -1,0 +1,26 @@
+[
+  {
+    "id":1,
+    "name":"Pritam",
+    "age":18,
+    "grade":69,
+    "email":"pritam@gmail.net",
+    "address":"your mom's house"
+  },
+  {
+    "id":2,
+    "name":"banana",
+    "age":100,
+    "grade":99,
+    "email":"banana@fruits.org",
+    "address":"the tree in your garden"
+  },
+  {
+    "id":3,
+    "name":"apple",
+    "age":"200",
+    "grade":"106",
+    "email":"apple@something.com",
+    "address":"the beach at hawaii"
+  }
+]
