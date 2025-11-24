@@ -6,14 +6,25 @@ This project allows you to **add**, **update**, **delete**, **view**, and **save
 ## Features
 - Load & save student data automatically using JSON  
 - Add new students with auto-generated IDs  
-- Update any student field  
+- Update any student field when needed  
 - Delete student records  
 - View all students in a clean table  
-- Save & exit / Exit without saving  
+- Save & Exit without saving  
+
+## Menu Options
+- List all
+- Add student
+- Update student
+- Delete student
+- Save and exit
+- Exit without saving
+
+## Requirements
+- Python 3.x
+- pandas
 
 ## How It Works
 Student data is stored in a JSON file and loaded into a Pandas DataFrame with columns:
-
 `id, name, age, grade, email, address`
 
 If the JSON file doesn’t exist or is invalid, the program initializes an empty dataset with the required headers.
@@ -27,18 +38,6 @@ If the JSON file doesn’t exist or is invalid, the program initializes an empty
 - **delete_student_rec(...):** Deletes a student by ID  
 - **print_students(data):** Displays all records  
 - **main():** Runs the interactive CLI menu  
-
-## Menu Options
-- List all
-- Add student
-- Update student
-- Delete student
-- Save and exit
-- Exit without saving
-
-## Requirements
-- Python 3.x
-- pandas
 
 ## Installing dependencies
 Simply run:
