@@ -23,6 +23,15 @@ This project allows you to **add**, **update**, **delete**, **view**, and **save
 - Python 3.x
 - pandas
 
+## Installing dependencies
+Simply run:
+`python -m pip install pandas`
+
+## Running the program
+- Download and put all the files into one folder
+- open cmd in that folder and run
+`python ./Student record Project.py`
+
 ## How It Works
 Student data is stored in a JSON file and loaded into a Pandas DataFrame with columns:
 `id, name, age, grade, email, address`
@@ -38,15 +47,6 @@ If the JSON file doesn’t exist or is invalid, the program initializes an empty
 - **delete_student_rec(...):** Deletes a student by ID  
 - **print_students(data):** Displays all records  
 - **main():** Runs the interactive CLI menu  
-
-## Installing dependencies
-Simply run:
-`python -m pip install pandas`
-
-## Running the program
-- Download and put all the files into one folder
-- open cmd in that folder and run
-`python ./main.py`
 
 ## Notes
 - Handles missing or corrupted JSON gracefully  
