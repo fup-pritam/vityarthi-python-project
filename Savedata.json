@@ -5,7 +5,7 @@
     "age":18,
     "grade":69,
     "email":"pritam@gmail.net",
-    "address":""
+    "address":"in his bed"
   },
   {
     "id":2,
@@ -13,15 +13,22 @@
     "age":100,
     "grade":99,
     "email":"banana@fruits.org",
-    "address":"the tree in garden"
+    "address":"tree in garden"
   },
   {
     "id":3,
     "name":"apple",
-    "age":"200",
-    "grade":"106",
+    "age":200,
+    "grade":106,
     "email":"apple@something.com",
-    "address":"In JnK"
+    "address":"in JnK"
+  },
+  {
+    "id":4,
+    "name":"Human",
+    "age":"100000",
+    "grade":"AAA",
+    "email":"human@human.human",
+    "address":"Earth"
   }
-
 ]
