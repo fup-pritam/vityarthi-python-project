@@ -20,7 +20,7 @@ This project allows you to **add**, **update**, **delete**, **view**, and **save
 - Exit without saving
 
 ## Requirements
-- Python 3.x
+- Python 3.x.
 - pandas
 
 ## Installing dependencies
